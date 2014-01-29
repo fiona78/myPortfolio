@@ -122,11 +122,11 @@ a.black{
 }
 
 a.black:hover{
-	color:#fff;	
+	color:#000;	
 }
 
 
-a.blackSimple{
+a.blackSimple2{
 	text-decoration:none;
 	color:#000;
 	background-color:#F63;

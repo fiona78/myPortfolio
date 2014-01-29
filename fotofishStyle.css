@@ -1,0 +1,1668 @@
+@charset "UTF-8";
+/* CSS Document */
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*=============================end of reset==================================*/
+body{
+	font-family:Helvetica, sans-serif;
+	font-size:12px;
+	background-image:url(../images/header_bg.jpg);
+	background-repeat:repeat-x;
+	
+}
+
+@font-face {  
+/*import font*/
+font-family:myFont; 
+ 	src: url(../assets/BIRTH_OF_A_HERO.ttf) format("truetype"); 
+ 
+}  
+ 
+p{
+	font-size:1.3em;
+	margin:3% 2%;	
+}
+
+p.myfont {
+		font-family:myFont, verdana, sans-serif; 
+		
+}
+/*use ems and % for resizing with the browser*/
+h1{
+	font-family:myFont, verdana, sans-serif; 
+	font-size:7em;
+	margin-left:8%;
+		
+}
+	
+h2{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:2em;
+	color:#000;
+	margin:4px 0 4px 2%;;
+	
+}
+
+
+
+h3{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.5em;
+	color:#333;
+	margin:4px 0 4px 2%;;
+}
+
+h4{
+	font-family:myFont, verdana, sans-serif; 
+	font-size:3em;
+	margin-left:8%;
+		
+}
+
+
+a{
+	text-decoration:none;
+	color:#FFF;	
+}
+/*style <a> link with class of 'black'*/
+a.black{
+	text-decoration:none;
+	color:#000;
+	background-color:#F63;
+	background:#999;
+	padding:1%;	
+	font-size:1.2em;
+	border-radius:10px;
+}
+
+a.black:hover{
+	color:#fff;	
+}
+
+
+a.blackSimple{
+	text-decoration:none;
+	color:#000;
+	background-color:#F63;
+	background:#999;
+	padding:1px;	
+	border-radius:2px;
+}
+
+/*this needs to be on the <a> as the list items are floated*/
+#current a{
+		background-color:#630;
+		
+}
+
+/*-------------------------main  elements ----------------------------*/
+
+#header{
+	position:relative;
+	max-width:1024px;/*set maximum width to 1024px*/
+	min-width:800px;/*set minimum width to 800px*/
+	margin:0 auto;/*centre*/
+	height:120px;
+	background:none;/*set background to none*/
+	
+}
+/*links right at top of page*/
+#topSub{
+	width:100%;/*page width 100%*/
+	height:20px;
+	border-bottom:1px solid #333;
+		
+}
+
+#topSub ul{
+	position:absolute;
+	top:0;
+	left:0;
+	margin-left:75%;/*shift to 75% length of the page*/
+}
+
+#topSub ul li {
+	float:left;
+	margin-left:10px;
+	font-family:myFont, verdana, sans-serif;
+	color:#000;
+	font-size:1.5em;
+	letter-spacing:1px;
+	
+}
+
+#topSub ul li a {
+	color:#000;
+		
+}
+	
+#topSub ul li a:hover{
+	color:#fff;
+		
+}
+
+#container{
+	max-width:1024px;
+	min-width:800px;
+	margin:0 auto;/*centre*/
+	background:none;
+	/*add gradient to container*/
+	-moz-box-shadow:3px 13px 15px rgba(51,51,51,0.9);
+	-o-box-shadow:3px 13px 15px rgba(51,51,51,0.9);
+	-webkit-box-shadow:3px 13px 15px rgba(51,51,51,0.9);
+	box-shadow:3px 13px 15px rgba(51,51,51,0.9);
+	
+}
+
+#topSection{
+	 background-color:white;
+}
+
+/*=======================navigations===================*/	
+/*style main navigation for website (topNav) and main navigation for admin pages*/
+#topNav, #admin_list{
+	width:100%;
+	background-color:#CC9933;/*fall back colour*/
+	background-color:rgba(204,153,51,0.8);
+	height:35px;
+	padding:0;
+	
+}
+
+#topNav ul, #admin_list{
+	display:block;
+	text-align:center;
+	
+}
+
+#topNav ul li a{
+	display:block;
+	width:16.65%;/*to spread each link evenly on page and allow relative resize*/
+	color:#fff;
+	float:left;/*for a horizontal menu*/
+	font-family:myFont, verdana, sans-serif; 
+	font-size:2em;
+	letter-spacing:1px;
+	padding-top:5px;
+	padding-bottom:5px;
+		
+}
+
+#topNav a:hover{
+	background-color:#630;
+	color:#FFF;		
+}
+		
+/*navigation for admin pages*/
+#admin_list ul li a{
+	display:block;
+	width:16.65%;/*to spread each link evenly on page and allow relative resize*/
+	color:#fff;
+	float:left;
+	font-family:myFont, verdana, sans-serif; 
+	font-size:2em;
+	letter-spacing:1px;
+	padding-top:5px;
+	padding-bottom:5px;
+		
+}
+
+#admin_list a:hover{
+	background-color:#630;
+	color:#FFF;
+		
+}
+/*style secondary naviation (under main navigation)*/
+#bottomNav{
+
+	width:100%;
+	background-color:#630;
+	height:30px;
+	margin-top:3px;
+	padding-bottom:4px;
+	background: #663300; /* Old browsers */
+	/*style with gradient*/
+	background: -moz-linear-gradient(left, #663300 0%, #b2997f 67%, #bcaea0 77%, #663300 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#663300), color-stop(67%,#b2997f), color-stop(77%,#bcaea0), 		                  color-stop(100%,#663300)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #663300 0%,#b2997f 67%,#bcaea0 77%,#663300 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #663300 0%,#b2997f 67%,#bcaea0 77%,#663300 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #663300 0%,#b2997f 67%,#bcaea0 77%,#663300 100%); /* IE10+ */
+	background: linear-gradient(to right, #663300 0%,#b2997f 67%,#bcaea0 77%,#663300 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#663300', endColorstr='#663300',GradientType=1 ); /* IE6-9 */
+}
+	
+#bottomNav ul{
+	display:block;
+	margin-left:5%;
+}
+
+#bottomNav ul li{
+	color:#FFF;
+	float:left;/*float left to position as horizontal list*/
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:1.3em;
+	margin-left:1%;
+	padding:6px;
+	letter-spacing:1px;
+	
+}
+
+#bottomNav ul li:nth-child(2) {/*specifically choose to change the left margin of the 2nd element*/
+ margin-left:10%; 
+	 
+}
+#bottomNav img {/*style all images inside bottomNav with no margins*/
+	margin:0;
+	
+}
+
+#bottomNav a:hover{
+	color:#000;
+	
+}
+/*----------end of navigation---------------*/
+	
+#middle{
+	
+	padding:1%;
+	border-bottom:#630 10px solid;
+	/*height:100%;*/
+	clear:both;
+}
+	
+#lftCol{
+	float:left;
+	background-color:#CCC;/*fall back colour*/
+	background-color:rgba(204,204,204,0.3);/*change alpha*/
+	width: 45%;
+	margin-left:3%;
+	margin-bottom:2%;
+	/*gradient*/
+	-moz-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	-o-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	-webkit-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+}
+
+
+#rgtCol{
+	float:left;
+	background:none;
+	width: 45%;
+	margin-left:3%;
+		
+}
+
+/*============sub section in rgtCol=========*/
+#sub{
+	background-color:#CCC;/*fallback colour*/
+	background-color:rgba(153,153,153,0.4);/*change alpha*/
+	margin:5px;
+	padding:2%;
+		
+}
+
+#sub ul{
+	background-color:#999;
+		
+}
+ 
+#sub ul li{
+	color:#000;
+	font-size:1.2em;
+}
+
+.upload{
+	font-size:1.1em;
+	padding-top:10px;
+
+	
+}
+
+.upload li{
+	margin:5px;	
+}
+
+#sub.home_slide {
+	height:300px;	
+		
+}
+
+#home_image{
+	margin-top:18px;
+	
+	
+}
+
+
+#sub2{
+	background-color:#CCC;/*fallback colour*/
+	background-color:rgba(153,153,153,0.4);
+	margin:5px;
+	/*style with gradient*/
+	-moz-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	-o-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	-webkit-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	border-radius:5px;
+	padding:1%;
+	
+}
+
+#sub2 p{
+	margin:4% 2%;
+	color:#630;
+		
+}
+/*============ more page elements =========*/
+
+#adverts {
+	height:100px;
+		
+}
+
+#profiles li{
+	font-size:1.3em;
+	margin:10px 20px;
+	
+	
+}
+
+
+#accessibility ul {
+	margin: 2%;	
+}
+
+#accessibility ul li {
+	margin:5px;
+	font-size:1.2em;
+}
+
+#search {
+	width:700px;
+	font-size:1.2em;
+		
+}
+
+#search ul{
+	width:700px;
+	font-size:1.2em;
+		
+}
+
+
+#fq{
+	width:100%;
+	background-color:#CCC;
+	background-color:rgba(204,204,204,1);
+	
+	
+}
+
+/*============galleries and image elements========================*/
+#galleries{
+	position:relative;/*relative to enable absolute positioning inside*/
+	background:none;
+	padding:1% 2% 25% 2%;
+	clear:both;/*clear floats*/
+	
+}
+/*place holder holds images*/
+.placeholder{
+	background:#ccc;/*fallback*/
+	background-color:rgba(153,153,153,0.3);
+	position:relative;/*relative so that i can position the ul in placeholder with absolute positioning..*/
+	float:left;/*to allow to line up side by side*/
+	margin-left:5%;
+	margin-top:2%;
+	width:227px;
+	height:295px;
+	padding:10px 10px 50px 10px;
+	/*add gradient*/
+	-moz-box-shadow:3px 13px 15px rgba(51,51,51,0.5);
+	-o-box-shadow:3px 13px 15px rgba(51,51,51,0.5);
+	-webkit-box-shadow:3px 13px 15px rgba(51,51,51,0.5);
+	box-shadow:3px 13px 15px rgba(51,51,51,0.5);	
+	
+}
+/*style the text box in the placeholder*/
+.placeholder ul{
+	position:absolute;/*position absolutely*/
+	top:205px;
+	left:12px;
+	width:83%;
+	padding:10px;
+	background:#ccc;/*fallback*/
+	background-color:rgba(204,204,204,0.8);
+}
+
+.placeholder ul li{
+	margin-bottom:4px;	
+	color:#000;
+	
+}
+/*style link colour in placeholer*/
+.placeholder a{
+	color:#633;
+		
+}
+/*style link colour with a closs of 'white'*/
+.white a{
+	color:#fff;	
+}
+/*position all images in div placeholders*/
+.placeholder img{
+	padding-left:2px;
+	margin:0 auto;/*centre*/	
+}
+
+/*background image on gallery page which creates a light box effect*/
+#bgmainImage{
+ position:absolute; 
+ top:0; 
+ left:0; 
+ z-index:8;/*need index as to position above placeholder divs, but below #imageholder div. */ 
+ width:100%; /*needs to fill up the whole #gallery div*/
+ height:100%; /*needs to fill up the whole #gallery div*/
+ background-color:#000;/*fallback colour*/
+ background-color:rgba(0,0,0,0.7); 
+ display:none;/*set to not display.called to display with jquery*/
+}
+/*holds the enlarged image on gallery page*/
+#imageholder{
+	position:absolute; /*position absolutely as to position centrally on the page.*/
+	top:10%; /*use % to shift position with browser resize*/
+	left:25%; /*use % to shift position with browser resize*/
+	z-index:10;/*position above #bgmainImage*/ 
+	padding:2% 2% 6% 2%; 
+	background-color:#000; 
+	display:none;/*called to display with jquery*/
+
+}
+/*set size of image in pop up gallery*/
+img#main {
+	width:500px;
+	
+	
+}
+
+/*opens up as the image description on gallery pages*/
+#textholder{
+	position:absolute; 
+	max-width:400px;/*width must not exceed 400px*/
+	height:100px;/*control trhe height*/
+	top:2%; 
+	left:1%; 
+	z-index:10; 
+	padding:2% 2% 6% 2%; 
+	background-color:#fff; 
+	display:none;/*called to display with jquery*/
+
+}
+/*holds the image description text*/
+#imageDescribe{
+	background-color:#CCC;
+	padding:10px;
+		
+}
+
+/*the close button to close the image view*/
+#close{ 
+position:absolute; 
+z-index:12; /*need to position above all other elements*/
+bottom:10px; 
+right:10px;
+}
+
+
+/*==============Cart elements========================*/
+#cart{
+	float:left;
+	background-color:#CCC;
+	background-color:rgba(204,204,204,0.3);
+	width: 85%;
+	margin-left:8%;
+	-moz-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	-o-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	-webkit-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+}
+
+#cart a{
+	color:#000;
+	margin-left:4%;
+	
+}
+
+#confirm a{
+	color:#000;
+		
+}
+
+/*===================footer======================*/
+#footer{
+	background-color:#cc9933;/*fall back colour*/
+	background-color:rgba(204,153,51,0.8);
+	clear:both;/*clear float*/
+	height:25px;
+	padding:2px 0 10px 0;
+	margin-top:10px;
+	margin-bottom:30px;	
+}
+
+#footer ul{
+	display:block;
+	padding:2px 0 10px 0;
+	margin-left:40px;
+	
+}
+
+#footer ul li{
+	color:#FFF;
+	float:left;
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:1em;
+	margin-left:12px;
+	margin-top:5px;
+	letter-spacing:1px;	
+}
+
+#footer a:hover {
+	color:#630;
+	
+
+}
+
+/*=============== classes ======================== classes ==================*/
+
+/*clear floats. This is important as website uses a lot of floats*/
+.clear {
+	clear:both;
+}
+
+/*centre all images with class of centre*/
+img.center { 
+display: block;/*to enable top/bottom padding and margin options*/ 
+margin-left: auto; 
+margin-right: auto;
+}
+/*change line height*/
+p.space{
+line-height:1.2em;	
+}
+.line{
+	border-top: 1px solid black;		
+}
+	
+.subhome/*just for home page*/
+{
+	height:200px;	
+}
+
+
+.news{/*just for news page*/
+	background-color:#CCC;
+	padding-left:5px;
+	margin:10px;
+		
+}
+.news h2{
+	color:#000;
+	font-size:1.4em;
+	margin-left:4px;
+	
+}
+
+.news li{
+	font-size:1.2em;
+	background:none;
+	
+}
+
+.news li.title{
+	font-weight:bold;
+	color:#333;
+	background:none;	
+}
+
+.news li.date{
+	font-weight:bold;
+	color:#666;
+	background:none;
+	margin-left:5px;	
+}
+/*style background of comment box*/
+li.newsitem{
+	color:#000;
+	margin:4px 4px 5px 4px;
+	padding:10px 2px 10px 2px;
+	font-size:1.2em;
+	/*background styling*/
+	background: #cc9933; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #cc9933 0%, #ccb07e 5%, #fcf8f7 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#cc9933), color-stop(5%,#ccb07e), color-stop(100%,#fcf8f7)); /* 							     Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #cc9933 0%,#ccb07e 5%,#fcf8f7 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #cc9933 0%,#ccb07e 5%,#fcf8f7 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #cc9933 0%,#ccb07e 5%,#fcf8f7 100%); /* IE10+ */
+	background: linear-gradient(135deg, #cc9933 0%,#ccb07e 5%,#fcf8f7 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc9933', endColorstr='#fcf8f7',GradientType=1 ); /* IE6-9 fallback on 	 									    horizontal gradient */	
+	
+}
+
+li.newsitem 
+{ 
+text-indent:10px;
+}
+
+.profile{
+	background:none;
+}
+
+.profile ul li{
+	font-size:2em;
+		
+}
+
+ul.profiles{
+	font-size:1.3em;
+	margin-left:4%;
+}
+
+ul.profiles li{
+	margin-top:8px;
+	font-size:1em;
+	
+}
+
+
+.edit{
+	color:#F60;
+	font-size:1.5em;
+	text-align:right;
+	margin-right:5px;
+	margin-left:75%;
+	
+	
+}
+
+.larger{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.8em;
+	color:#000;
+	margin:4px 0 4px 2%;;
+	
+}
+
+/*stye paragraph with class of 'write'*/
+p.write{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#630;
+	margin:2% 0 4px 6%;;
+	font-size:24px;
+	
+}
+
+
+/*class for adding/stying a margin*/
+.marg{
+margin:1% 0 4px 4%;
+	
+	
+}
+/*style error message*/
+.error
+{
+	color:#F00;
+	font-size:1.5em;	
+}
+
+.brown{
+	color:#630;
+	
+}
+
+.red{
+	color:#F00;
+	font-size:0.8em;
+	
+}
+/*class used to indent text*/
+.indent {
+	margin-left:7%;	
+}
+
+.bold {
+	font-weight:bold;
+	
+}
+
+.boldLarger {
+	font-weight:bold;
+	font-size:140%;
+	
+}
+
+/*---style the gallery button links and pagination links----*/
+.pagelist{
+	margin:25px 5%;
+	font-size:1.6em;	
+}
+
+.pagelist ul li a{
+	color:#000;
+	font-size:1.5em;
+	float:left;
+	margin:20px 10px 20px 0;
+	background-color:#CCC;
+	padding:4px;
+	border-radius:5px;
+}
+
+ul.nextPage{
+	display:inline-block;
+	font-size:1.3em;
+	margin-left:4%;	
+	margin-top:10px;
+}
+
+.nextPage a{
+	font-size:1.3em;
+	color:#000;
+	float:left;
+	margin-left:4%;
+	
+}
+
+.nextPage a:hover{
+	color:#630;
+		
+}
+
+ul.nextGallery{
+	display:block;
+	font-size:1.2em;
+	margin-left:2%;	
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:0;
+	
+}
+
+.nextGallery li{
+	float:left;
+	background-color:#999;
+	padding:5px;
+	margin:10px;
+	border-radius:5px;
+	
+}
+
+
+.nextGallery a{
+	font-size:1em;
+	color:#000;
+	float:left;
+	margin-left:1%;
+	padding:0;
+	
+}
+
+.nextGallery li:hover {
+	background-color:#C93;
+	
+}
+
+.paddingRgt{
+	padding-right:13px;
+	
+	
+}
+
+.address{
+	margin:10px;
+	
+	
+}
+
+
+/*========================= table elements ========================*/
+#tables table {
+	width:100%;/*table to fit whole length of parent container*/
+	font-size:1.2em;
+	table-layout:fixed;
+	overflow:scroll;/*create scroll if content overflows*/	
+}
+/*to style middle div when the middle div needs to be scrolled*/
+.scrollDiv{
+	overflow-x:scroll;/*allow scrolling along x and not y*/	
+	
+}
+
+#tables a{
+	color:#000;
+	
+	
+}
+.medium{
+font-size:0.9em;		
+}
+.smaller{
+	font-size:0.6em;
+	
+}
+
+.zebra td, .zebra th {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;    
+}
+
+.zebra tbody tr:nth-child(even) {/*style background for every other row*/
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+}
+
+.zebra th {/*style table header*/
+    text-align: left;
+	font-size:1.1em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); /*add a text shadow*/
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+	/*add gradient bacjground for different browsers*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image: -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image: -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image: -o-linear-gradient(top, #f5f5f5, #eee); 
+    background-image: linear-gradient(top, #f5f5f5, #eee);
+}
+
+.zebra th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;  
+}
+
+.zebra th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.zebra th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.zebra tfoot td {
+    border-bottom: 0;
+    border-top: 1px solid #fff;
+    background-color: #f1f1f1;  
+}
+
+.zebra tfoot td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.zebra tfoot td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+.zebra tfoot td:only-child{
+    -moz-border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+}
+/*style certain <td> cells*/
+table td.constraint  {
+	width:20%;
+	overflow:hidden scroll;
+	padding-right:2px;	
+	
+}
+
+#scrollcell {
+   width: 40px;
+   height:100%;
+   color:#0C6;
+   overflow:scroll;
+}
+
+	
+/*============================ form elements =========================================*/	
+/*style main form div*/
+#formSection{
+	float:left;
+	background-color:#CCC;
+	background-color:rgba(153,153,153,0.3);
+	width: 85%;/*make form width to be 85% of the page*/
+	margin-left:8%;
+	/*add a gradient style*/
+	-moz-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	-o-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	-webkit-box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+	box-shadow:3px 13px 15px rgba(51,51,51,0.4);
+}
+
+#formSection p{
+	font-size:1.1em;	
+}
+
+#formSection p.write {
+	font-size:1.8em;	
+}
+
+#formSection a{
+	color:#F60;
+	
+}
+/*class to make a <a> black in the form section*/
+#formSection a.black{
+	color:#000;
+	
+}
+/*style submit button with id of 'submit' in formsection */
+#formSection #submit{
+	background-color:#999;
+	color:#000;
+	font-size:2em;
+	margin-right:200px;
+	margin:1% 200px 2% 20px;
+		
+}
+
+
+#reset{
+	background-color:#999;
+	color:#000;
+	font-size:2em;
+	margin-right:200px;
+	margin:1% 200px 2% 20px;
+	border-radius:10px;
+		
+}
+
+#contactForm{
+	font-size:1em;
+}
+
+#contactForm p{
+	font-size:1.4em;
+}
+/*style the textarea form element in #contactForm div*/
+#contactForm textarea{
+width:90%;	
+background:#630;
+color:#FFF;
+font-family:Arial, Helvetica, sans-serif;
+	
+}
+
+#contactForm #submit {
+	color:black;
+	background-color:#F60;
+	border-radius:10px;
+	width:30%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	letter-spacing:2px;
+	font-size:1em;
+	
+}
+
+/*General submit button*/
+#modifyForm #submit {
+	color:black;
+	background-color:#F60;
+	border-radius:10px;
+	width:8%;
+	margin-left:2%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	letter-spacing:2px;
+	font-size:1em;
+	
+}
+	
+#accountForm{
+	margin-left:5%;
+			
+}
+
+#modifyForm{
+	margin-left:5%;
+	padding:2%;
+		
+}
+
+#accountForm input[type="text"]{ 
+width:70%;
+
+}
+
+#accountForm input[type="submit"]{ 
+background-color:#F90;
+font-family:Arial, Helvetica, sans-serif;
+font-size:1.3em;
+border-radius:10px;
+}
+
+#accountForm, #logInForm p{
+	font-family:Arial, Helvetica, sans-serif;
+font-size:1.5em
+	
+}
+/*style the input text box of the log in form. make its width half the size of its parent container*/
+#logInForm input[type="text"]{ 
+width:50%;
+}
+/*style the input password box of the log in form. make its width half the size of its parent container*/
+#logInForm input[type="password"]{ 
+width:50%;
+}
+/*style the input text box of the contact form. make its width 80% of its parent container*/
+#contactForm input[type="text"]{ 
+width:80%;
+display:inline-block;
+}
+
+/*style the submit button of the login Form*/
+#logInForm input[type="submit"]{ 
+width:25%;
+font-size:1.2em;
+background-color:#630;/*fallback colour*/
+background: -webkit-gradient( linear, left bottombottom, left top, color-stop(0, rgb(102,51,0)), 			    
+		color-stop(1,rgb(102,51,0)));  
+background: -moz-linear-gradient( center top, rgb(102,51,0) 0%, rgb(102,51,0) 100%);  
+border-radius: 8px;  
+-webkit-border-radius: 8px;  
+-moz-border-radius: 8px;  
+color:#fff;
+
+}
+
+
+#search{
+	 background: #e1e1e1; /*==Fallback color for non-css3 browsers==*/  
+	 font-size: 0.9em;
+        width: 185px; 
+		margin-bottom:5px;
+		margin-top:0px;
+    /* Gradients */  
+        background: -webkit-gradient( linear,left top, left bottombottom, color-stop(0, rgb(243,243,243)), color-stop(1, rgb(225,225,225)));  
+        background: -moz-linear-gradient( center top, rgb(243,243,243) 0%, rgb(225,225,225) 100%);  
+ 	/* Rounded Corners */  
+        border-radius: 17px;  
+        -webkit-border-radius: 17px;  
+        -moz-border-radius: 17px;  
+	/* Shadows */  
+        box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);  
+        -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);  
+        -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);  
+    } 
+	
+	
+#mainSearch {
+	background-color:#CC9933;/*fall back colour*/
+	background-color:rgba(204,153,51,0.8);
+		
+		
+}
+      
+/*====general input text box====*/  
+input[type="text"],input[type="password"] {  
+        background: #fafafa; /* Fallback color for non-css3 browsers */  
+        /* Gradients */  
+        background: -webkit-gradient( linear, left bottombottom, left top, color-stop(0, rgb(250,250,250)), 			    
+		color-stop(1,rgb(230,230,230)));  
+        background: -moz-linear-gradient( center top, rgb(250,250,250) 0%, rgb(230,230,230) 100%);  
+       border: 0;  
+        border-bottom: 1px solid #fff;  
+        border-right: 1px solid rgba(255,255,255,.8);  
+        font-size: 1em;  
+        margin:0 0 10px 0px;  
+        padding-left: 9px;  
+        width: 285px;  
+  		/* Rounded Corners */  
+        border-radius: 15px;  
+        -webkit-border-radius: 17px;  
+        -moz-border-radius: 17px;  
+  		/* Shadows */  
+        box-shadow: -1px -1px 2px rgba(0,0,0,.3), 0 0 1px rgba(0,0,0,.2);  
+        -webkit-box-shadow: -1px -1px 2px rgba(0,0,0,.3), 0 0 1px rgba(0,0,0,.2);  
+        -moz-box-shadow: -1px -1px 2px rgba(0,0,0,.3), 0 0 1px rgba(0,0,0,.2);  
+}  
+  /*=== User focus on input box===*/  
+input[type="text"]:focus{  
+        outline: none;  
+        background: #fff; /* Fallback color for non-css3 browsers */  
+    	/* Gradients */  
+        background: -webkit-gradient( linear, left bottombottom, left top, color-stop(0, rgb(255,255,255)), color-stop(1, rgb(235,235,235)));  
+        background: -moz-linear-gradient( center top, rgb(255,255,255) 0%, rgb(235,235,235) 100%);  
+} 
+
+
+input[type="submit"] {
+		font-size:0.8em;
+		
+		
+}
+
+#submit_btn {
+		font-size:1.8em;
+		background-color:#999;
+		padding:2px;
+		border-radius:5px;
+		margin:2px 2px 2px 5%;
+		
+		
+}
+	
+.normal_btn a{
+		font-size:1.8em;
+		color:#000;
+		background-color:#999;
+		padding:5px;
+		border-radius:0;
+		margin:2px 2px 5px 5%;
+		
+}
+/*style all form texarea elements*/
+textarea{
+	max-width:100%;
+	min-width:80%;
+	height:100px;	
+	
+}
+
+.editAdmin{
+	height:500px;
+	margin:40px 5%;
+	color:#000;
+	text-align:left;
+	font-size:1em;
+		
+}
+	
+
+/*========================== accordian ========================*/
+
+#contentAccordian{
+	margin:2% auto;
+	padding:2%;
+	width:90%;
+		
+}
+
+#contentAccordian p{
+	font-size:1.4em;
+	margin:2px;
+		
+}
+
+#accordianStuff > div{
+	height:60px;
+	color:#000;
+	background-color:#CCC;
+	background-color:rgba(204,204,204,1);
+	font-size:1.4em;
+	margin:2px 10px;
+		
+}
+
+#accordianTerms > div{
+	height:100px;
+	color:#000;
+	background-color:#CCC;
+	background-color:rgba(204,204,204,1);
+	font-size:1.4em;
+	margin:2px 10px;
+		
+}
+
+
+#contentAccordian h2{
+	 font-size:1.5em;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000;
+	font-weight:bold;
+	margin-bottom:10px;
+	
+	
+}
+
+.scroll {
+	overflow:scroll;
+	
+}
+
+/*===================== Drop down toggle menu (about us page) =============*/
+
+#toggleNav{
+	
+	width:100%;
+	background-image:url(../images/500/12.jpg);
+	background-repeat:no-repeat;
+	margin-top:2px;
+	margin-left:0;
+	height:400px;
+		
+}
+
+#toggleNav ul {
+	background-color:#ccc;
+	background-color:rgba(204,204,204,0.4);
+	
+}
+
+#toggleNav ul li{
+	background-color:#ccc;
+	background-color:rgba(204,204,204,0.4);
+	
+}
+.click-nav {
+	margin:0;  
+	font-size:1em;
+	float:left; 
+	height:300px;
+	width:110px;
+	
+}
+.click-nav ul {
+	position:relative; 
+	font-size:1.2em; 
+	float:left;	
+	background:none;
+	width:105px;
+	margin-left:0;
+	padding:0;
+}
+.click-nav ul li {
+	position:relative;
+	width:100%;
+	font-size:1em; 
+	list-style:none;
+	cursor:pointer;
+	float:left;	
+	background:none;
+	width:105px;
+	margin-left:0;
+	padding:0;
+}
+.click-nav ul li ul {
+	position:absolute;
+	left:0;
+	right:0;
+	width:100%;
+	background:none;
+}
+.click-nav ul .clicker {
+	position:relative;
+	background:none;
+	color:#000;
+	background-color:#CC9933;/*fall back colour*/
+	background-color:rgba(204,153,51,0.8);
+	font-family:myFont, verdana, sans-serif;  
+	font-size:1.5em;
+	font-size:1em\9; /* IE8 and below */ 
+	height:26px;
+	padding:2px 0 2px 8px;
+	letter-spacing:2px;
+}
+.click-nav ul .clicker:hover,.click-nav ul .active {	
+	background:none;
+}
+.click-nav ul li a {
+	display:block;padding:8px 10px 8px 20px; background:none; color:#000;text-decoration:none;font-size:0.8em;
+}
+.click-nav ul li a:hover {
+	background-color:#CC9933;/*fall back colour*/
+	background-color:rgba(204,153,51,0.8);
+}
+
+
+
+/*======================================================== media queries=========================================================*/	
+	
+		
+	
+	
+@media all and (max-width: 800px) {
+	
+	
+#container{
+    max-width:800px;/*change to 800px*/
+	min-width:360px;/*this is changed to mobile layout size*/
+	margin:0 auto;/*centre*/	
+
+}
+	
+#lftCol{
+	float:left;
+	background-color:#CCC;
+	background-color:rgba(204,204,204,0.3);
+	width: 90%;/*make column increase in width to make other column drop beneath*/
+	margin-left:5%;
+}
+
+
+#rgtCol{
+	float:left;
+	background:none;
+	width: 90%;/*make column increase in width to fit entire page*/
+	margin-left:5%;
+	
+	
+}
+/*make font size smaller*/
+#admin_list{
+	font-size:0.8em;
+	overflow:hidden;	
+	
+}
+/*shift topSub to left of page*/
+#topSub ul{
+	position:absolute;
+	top:0;
+	left:0;
+	margin-left:2%;
+}
+	
+#topNav ul{
+	display:block;
+	text-align:center;
+	
+}
+/*change font size*/
+#topNav ul li a{
+	font-size:1.4em;
+		
+}
+
+#bottomNav{
+/*change height and margin*/
+	height:60px;
+	margin-top:3px;
+
+}
+	
+#bottomNav ul{
+	display:block;
+	margin-left:1%;
+}
+/*change font size*/
+#bottomNav ul li{
+font-size:1em;
+		
+}
+
+#bottomNav ul li:nth-child(2) {
+  
+	margin-left:2%; 
+	 
+}
+/*remove cart image*/
+#bottomNav img{
+	display:none;
+	
+}
+
+/**/
+#imageholder{/*change left position*/
+	top:10%; 
+	left:10%; 
+
+}
+/*resize font*/
+#tables table {
+	width:100%;
+	font-size:1em;
+	overflow:scroll;
+			
+}
+/*resize font*/
+.zebra th{
+	font-size:1em;
+			
+}
+
+/*class to make search take up whole line*/
+.long{
+	width:100%;
+	display:block;
+	clear:both;
+	
+}
+/*resize cart font*/
+#cart a{
+	font-size:0.8em;
+		
+}
+
+
+/*========accordian===========*/
+
+#contentAccordian p{/*change font size*/
+	font-size:1.2em;
+	/*overflow:scroll;*/
+		
+}
+
+#accordianStuff > div{/*change font size and measurements*/
+	height:90px;
+	font-size:1.2em;
+	margin:2px 10px;
+		
+}
+
+
+#contentAccordian h2{/*change font size*/
+	 font-size:1.2em;
+	
+}
+
+
+
+
+}
+
+
+
+@media all and (max-width: 500px) {
+	
+#topNav ul li a{/*change font size*/
+	font-size:1em;
+			
+}
+/*change font size and font-family*/
+#admin_list ul li a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.1em;
+		
+}	
+/*change margins*/
+#galleries{
+	margin-left:1%;;	
+	
+}
+/*change position/padding/and size*/
+#imageholder{
+position:absolute;
+	width:300px;
+	height:300px;
+	top:10%; 
+	left:2%;  
+	padding:2% 2% 6% 2%; 
+	background-color:#000; 
+	display:none;
+
+}
+
+/*make image smaller in relation to its original size*/
+img#main {
+	width:85%;
+	height:70%;	
+	
+}
+
+
+#cart a{
+	width:50%;
+	font-size:1em;
+	display:block;
+	margin-top:5px;
+	
+}
+
+#accordianStuff > div{
+	/*resize font and elements*/
+	height:100px;
+	font-size:1em;
+	overflow:auto;
+
+		
+}
+/*resize font and elements*/
+#accordianTerms > div{
+	height:100px;
+	font-size:1.1em;
+	margin:2px 10px;
+		
+}	
+/*resize font*/
+#contentAccordian h2{
+	 font-size:1em;
+	
+	
+}
+/*resize font*/
+#tables table {
+	width:100%;
+	font-size:0.9em;
+	overflow:scroll;
+			
+}
+
+/*make button font smaller*/
+.normal_btn a{
+		font-size:1em;
+		font-weight:bold;
+		
+		
+}
+
+/*make button font smaller*/
+#submit_btn {
+		font-size:1em;
+		font-weight:bold;
+			
+}
+
+/*make button font smaller*/
+#modifyForm #submit {
+
+	letter-spacing:1px;
+	font-size:0.8em;
+	
+}
+
+.scrollDate{
+	overflow-x:scroll;
+	
+}
+/*resize height*/
+#footer{
+	height:30px;
+		
+}
+
+
+
+@media all and (max-width: 360px) {
+	
+/*resize*/	
+img#home_image{
+	width:85%;
+	
+	
+}
+/*resize*/
+#sub.home_slide {
+	height:200px;
+	
+	
+}
+/*make button font smaller*/
+.normal_btn a{
+		font-size:1em;
+		
+		
+}
+
+/*resize*/
+#footer{
+	height:45px;
+		
+}
+	
+	
+}
+
+
+
+	
+	
+
+

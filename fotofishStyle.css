@@ -122,11 +122,11 @@ a.black{
 }
 
 a.black:hover{
-	color:#fff;	
+	color:#000;	
 }
 
 
-a.blackSimple{
+a.blackSimple2{
 	text-decoration:none;
 	color:#000;
 	background-color:#F63;
@@ -136,7 +136,7 @@ a.blackSimple{
 }
 
 /*this needs to be on the <a> as the list items are floated*/
-#current a{
+#current a.height {
 		background-color:#630;
 		
 }
@@ -160,14 +160,14 @@ a.blackSimple{
 		
 }
 
-#topSub ul{
+#topSub ul li{
 	position:absolute;
 	top:0;
 	left:0;
 	margin-left:75%;/*shift to 75% length of the page*/
 }
 
-#topSub ul li {
+#topSub ul li a{
 	float:left;
 	margin-left:10px;
 	font-family:myFont, verdana, sans-serif;
@@ -177,7 +177,7 @@ a.blackSimple{
 	
 }
 
-#topSub ul li a {
+#topSub ul li a:hover {
 	color:#000;
 		
 }
@@ -187,7 +187,7 @@ a.blackSimple{
 		
 }
 
-#container{
+#container li{
 	max-width:1024px;
 	min-width:800px;
 	margin:0 auto;/*centre*/

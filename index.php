@@ -19,3 +19,4 @@ include($controller_path);
 	include('application/controllers/404.php');	
 };
 ?>
+<p>text</p>

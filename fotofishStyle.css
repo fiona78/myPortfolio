@@ -50,7 +50,9 @@ table {
 
 /*=============================end of reset==================================*/
 body{
+
 	font-family:arial;
+
 	font-size:12px;
 	background-image:url(../images/header_bg.jpg);
 	background-repeat:repeat-x;
@@ -64,24 +66,24 @@ font-family:myFont;
  
 }  
  
-p{
+p.face{
 	font-size:1.3em;
 	margin:3% 2%;	
 }
 
-p.myfont {
+p.myfont lala{
 		font-family:myFont, verdana, sans-serif; 
 		
 }
 /*use ems and % for resizing with the browser*/
-h1{
+h1.h{
 	font-family:myFont, verdana, sans-serif; 
 	font-size:7em;
 	margin-left:8%;
 		
 }
 	
-h2{
+h2.p{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:2em;
 	color:#000;
